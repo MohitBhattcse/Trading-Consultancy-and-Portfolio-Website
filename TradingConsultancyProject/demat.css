@@ -1,0 +1,113 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #0d0d0d, #1a1a1a);
+    color: #f0f0f0;
+    overflow-x: hidden;
+  }
+  
+  /* Main container */
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Heading */
+  .main-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00ffff;
+    text-shadow: 3px 3px 8px rgba(0, 255, 255, 0.7);
+    margin-bottom: 50px;
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* Cards */
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Card styles */
+  .card {
+    position: relative;
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    background: #222;
+    transition: transform 0.5s, box-shadow 0.5s;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 25px rgba(0, 255, 255, 0.5);
+  }
+  
+  /* Card image */
+  .card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid #00ffff;
+    transition: transform 1s;
+  }
+  
+  .card:hover .card-image {
+    transform: scale(1.2) rotate(5deg);
+  }
+  
+  /* Card content */
+  .card-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .card-content h2 {
+    font-size: 1.5rem;
+    color: #00ffff;
+    margin-bottom: 10px;
+  }
+  
+  .card-content p {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  /* Heading animation */
+  @keyframes pulse {
+    0% {
+      text-shadow: 3px 3px 8px rgba(0, 255, 255, 0.7);
+    }
+    50% {
+      text-shadow: 5px 5px 15px rgba(0, 255, 255, 1);
+    }
+    100% {
+      text-shadow: 3px 3px 8px rgba(0, 255, 255, 0.7);
+    }
+  }
+  
+  /* Card hover animation */
+  @keyframes hover-glow {
+    0% {
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+    }
+    50% {
+      box-shadow: 0 15px 25px rgba(0, 255, 255, 0.5);
+    }
+    100% {
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cards {
+      flex-direction: column;
+    }
+  }
+  
